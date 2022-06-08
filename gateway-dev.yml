@@ -4,11 +4,11 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: jogosRoute
-          uri: lb://JOGOS
+        - id: catalogRoute
+          uri: lb://CATALOG
           predicates: 
-            - Path=/jogos/**
-        - id: bibliotecaRoute
-          uri: ld://BIBLIOTECA
+            - Path=/catalog/**
+        - id: MovieRoute
+          uri: ld://Movie
           predicates:
-            - Path=/biblioteca/**
+            - Path=/movie/**
